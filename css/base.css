@@ -1,0 +1,36 @@
+:root {
+  --color-primary: #c69963;
+  --color-primary-dark: #b28451;
+  --color-primary-transparent: hsl(33, 46%, 58%, 0.5);
+  --color-primary-dark-transparent: hsl(32, 39%, 51%, 0.5);
+
+  --color-secondary: #101d2c;
+  --color-secondary-transparent: hsl(212, 47%, 12%, 0.9);
+
+  --color-grey-light-1: #f9f7f6;
+  --color-grey-light-2: #aaa;
+
+  --color-grey-dark-1: #54483a;
+  --color-grey-dark-2: #6d5d4b;
+
+  /* // FONT VARIABLES */
+  --font-primary: "Nunito", sans-serif;
+  --font-display: "Josefin Sans", sans-serif;
+}
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+body {
+  font-family: var(--font-primary);
+  color: var(--color-grey-dark-2);
+  font-weight: 300;
+  line-height: 1.6;
+}

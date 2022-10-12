@@ -1,0 +1,42 @@
+.container {
+  display: grid;
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  grid-template-columns:
+    [side-bar-start]6rem[side-bar-end full-start] minmax(min-content, 1fr)
+    [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+    [center-end]
+    minmax(min-content, 1fr) [full-end];
+}
+/* .container > * {
+  padding: 4rem;
+  font-size: 3rem;
+} */
+.side-bar {
+  grid-column: side-bar-start/side-bar-end;
+  grid-row: 1/-1;
+}
+.header {
+  grid-column: full-start/col-end 6;
+}
+.realtors {
+  grid-column: col-start 7 / full-end;
+}
+.features {
+  grid-column: center-start/center-end;
+  padding: 4rem;
+}
+.story__picture {
+  grid-column: full-start/ col-end 4;
+}
+.story__content {
+  grid-column: col-start 5 / full-end;
+}
+.homes {
+  grid-column: center-start/center-end;
+}
+.gallary {
+  grid-column: full-start/full-end;
+}
+.footer {
+  grid-column: full-start/full-end;
+}

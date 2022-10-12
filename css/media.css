@@ -1,0 +1,116 @@
+@media (max-width: 75rem) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 56rem) {
+  .container {
+    display: grid;
+    grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+    grid-template-columns:
+      [full-start] minmax(min-content, 1fr)
+      [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+      [center-end]
+      minmax(min-content, 1fr) [full-end];
+  }
+
+  .side-bar {
+    grid-column: 1/-1;
+    grid-row: 1;
+    display: grid;
+    justify-content: end;
+    padding-inline-end: 3rem;
+  }
+}
+@media (max-width: 50rem) {
+  .container {
+    display: grid;
+    grid-template-rows: 6rem calc(100vh - 6rem) min-content min-content 40vw repeat(
+        3,
+        min-content
+      );
+    grid-template-columns:
+      [full-start] minmax(min-content, 1fr)
+      [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+      [center-end]
+      minmax(min-content, 1fr) [full-end];
+  }
+  .header {
+    grid-column: 1/-1;
+  }
+  .realtors {
+    grid-column: 1/-1;
+    justify-items: center;
+    padding: 3rem;
+  }
+  .realtors__list {
+    grid-template-columns: repeat(3, min-content max-content);
+  }
+
+  .story__picture {
+    grid-column: 1/-1;
+    padding-block: 6rem;
+    padding-inline-end: 6rem;
+
+    background-image: cover;
+
+    align-content: center;
+
+    justify-items: center;
+  }
+  .story__content {
+    grid-column: 1/-1;
+    grid-row: 5/6;
+  }
+  .story__couble {
+    height: 100%;
+    grid-row: 1/-1;
+  }
+  .story__home {
+    grid-row: 2/6;
+    width: 90%;
+    justify-self: end;
+    z-index: 20;
+  }
+}
+@media (max-width: 40.5rem) {
+  .container {
+    display: grid;
+    grid-template-rows: 6rem calc(100vh - 6rem);
+    grid-template-columns:
+      [full-start] minmax(min-content, 1fr)
+      [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+      [center-end]
+      minmax(min-content, 1fr) [full-end];
+  }
+  .heading-1 {
+    font-size: 2.6rem;
+    line-height: 1.1;
+  }
+  .header .btn {
+    justify-self: start;
+    align-self: end;
+    margin-block-end: 3rem;
+  }
+  .seenon__logo img {
+    margin: 0 auto;
+    height: 2rem;
+
+    opacity: 0.7;
+  }
+  .header .heading-3 {
+    align-self: end;
+    font-size: 1.2rem;
+    color: var(--color-primary);
+  }
+}
+@media (max-width: 33rem) {
+  .realtors__list {
+    grid-template-columns: repeat(1, min-content max-content);
+  }
+}
+@media (max-width: 25.5rem) {
+  .footer {
+    padding-inline: 15rem;
+  }
+}
